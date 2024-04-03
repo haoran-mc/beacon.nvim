@@ -81,6 +81,7 @@ M.cursor_move = function()
 
   if cur_buf ~= prev_buf or diff_line >= win_height then
     M.highlight_position()
+    vim.cmd("normal! zz")
   end
   prev_buf = cur_buf
   prev_line = cur_line
