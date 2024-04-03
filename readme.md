@@ -10,7 +10,7 @@ use { 'haoran-mc/beacon.nvim' }`
 
 ```lua
 require('beacon').setup({
-	timeout = 500,
+	timeout = 200,
 	ignore_buffers = {},
 	ignore_filetypes = {},
 })
