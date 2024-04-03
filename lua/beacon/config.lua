@@ -1,7 +1,7 @@
 local M = {}
 
 M.items = {
-  timeout = 500,
+  timeout = 200,
   ignore_buffers = {},
   ignore_filetypes = {},
 }
