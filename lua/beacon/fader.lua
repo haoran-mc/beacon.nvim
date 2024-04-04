@@ -21,13 +21,6 @@ end
 
 -- 2. highlight
 M.highlight_position = function()
-  if utils.is_ignored_filetype(ignore_filetypes_set) then
-    return
-  end
-  if utils.is_ignored_buffer(ignore_buffers_set) then
-    return
-  end
-
   if float_id > 0 then
     M.clear_highlight()
   end
@@ -80,6 +73,11 @@ M.cursor_move = function()
   local win_height = math.max(vim.fn.winheight(0) / 2 - 1, 1)
 
   if cur_buf ~= prev_buf or diff_line >= win_height then
+    if utils.is_ignored_filetype(ignore_filetypes_set)
+      or utils.is_ignored_buffer(ignore_buffers_set) then
+      return
+    end
+
     M.highlight_position()
     vim.cmd("normal! zz")
   end
