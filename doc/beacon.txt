@@ -18,7 +18,7 @@ INSTALLATION                                 *beacon-beacon.nvim-installation*
 Install this plugin using your favorite plugin manager. For example, using
 lazy.nvim <https://github.com/folke/lazy.nvim>:
 
->vim
+>lua
     use { 'haoran-mc/beacon.nvim' }
 <
 
@@ -47,7 +47,7 @@ BEACON
 
 >vim
     :Beacon
->
+<
 
 Highlight the current cursor position
 
