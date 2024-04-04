@@ -1,0 +1,67 @@
+*beacon.txt*                           Highlight cursor position when jump far
+
+==============================================================================
+Table of Contents                                   *beacon-table-of-contents*
+
+1. beacon.nvim                                            |beacon-beacon.nvim|
+  - Installation                             |beacon-beacon.nvim-installation|
+  - Options                                       |beacon-beacon.nvim-options|
+  - Commands                                     |beacon-beacon.nvim-commands|
+  - Highlights                                 |beacon-beacon.nvim-highlights|
+
+==============================================================================
+1. beacon.nvim                                            *beacon-beacon.nvim*
+
+
+INSTALLATION                                 *beacon-beacon.nvim-installation*
+
+Install this plugin using your favorite plugin manager. For example, using
+lazy.nvim <https://github.com/folke/lazy.nvim>:
+
+>vim
+    use { 'haoran-mc/beacon.nvim' }
+<
+
+
+OPTIONS                                           *beacon-beacon.nvim-options*
+
+The following table shows the default options for this plugin:
+
+>lua
+    {
+      timeout = 200,
+      ignore_buffers = {},
+      ignore_filetypes = {},
+    }
+<
+
+
+TIMEOUT
+
+Highlighted existence time.
+
+
+COMMANDS                                         *beacon-beacon.nvim-commands*
+
+BEACON
+
+>vim
+    :Beacon
+>
+
+Highlight the current cursor position
+
+
+HIGHLIGHTS                                     *beacon-beacon.nvim-highlights*
+
+This plugin uses the following highlights to display the beacons, and can be
+overridden to customize how beacons look.
+
+For example, to make the `Beacon` blue, add the following to your .vimrc:
+
+>vim
+    highlight Beacon guibg=blue ctermbg=15
+<
+
+
+vim:tw=78:ts=8:noet:ft=help:norl:
