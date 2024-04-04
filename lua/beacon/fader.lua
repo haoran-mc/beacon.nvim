@@ -78,8 +78,8 @@ M.cursor_move = function()
       return
     end
 
-    M.highlight_position()
     vim.cmd("normal! zz")
+    M.highlight_position()
   end
   prev_buf = cur_buf
   prev_line = cur_line
