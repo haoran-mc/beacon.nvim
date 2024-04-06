@@ -10,13 +10,13 @@ use { 'haoran-mc/beacon.nvim' }`
 
 ```lua
 require('beacon').setup({
-	timeout = 200,
-	ignore_buffers = {},
-	ignore_filetypes = {},
+    timeout = 200,
+    ignore_buffers = {},
+    ignore_filetypes = {},
 })
 ```
 
-- highlights
+- highlight:
 
 ```vim
 highlight Beacon guibg=white ctermbg=15
