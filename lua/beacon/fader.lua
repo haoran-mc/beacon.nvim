@@ -70,7 +70,7 @@ M.cursor_move = function()
   local cur_buf = vim.fn.bufnr('%')
   local cur_line = vim.fn.line(".")
   local diff_line = math.abs(cur_line - prev_line)
-  local win_height = math.max(vim.fn.winheight(0) / 2 - 1, 1)
+  local win_height = math.max(vim.fn.winheight(0) - 1, 1)
 
   if cur_buf ~= prev_buf or diff_line >= win_height then
     if utils.is_ignored_filetype(ignore_filetypes_set)
